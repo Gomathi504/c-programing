@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+
+void calculateGrossSalary(int basicSalary) {
+    double hra, da, gross;
+
+    if (basicSalary < 15000) {
+        hra = 0.15 * basicSalary;
+        da = 0.90 * basicSalary;
+    } else {
+        hra = 5000;
+        da = 0.98 * basicSalary;
+    }
+
+    gross = basicSalary + hra + da;
+
+  
+    printf("%.2f\n", gross);
+}
+
+int main() {
+    int basicSalary;
+
+    
+    scanf("%d", &basicSalary);
+
+        calculateGrossSalary(basicSalary);
+
+    return 0;
+}
